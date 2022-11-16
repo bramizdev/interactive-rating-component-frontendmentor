@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+  --color-primary-500: hsl(25, 97%, 53%);
+  --color-neutral-100: hsl(0, 0%, 100%);
+  --color-neutral-200: hsl(217, 12%, 63%);
+  --color-neutral-300: hsl(216, 12%, 54%);
+  --color-neutral-700: hsl(213, 19%, 22%);
+  --color-neutral-800: hsl(213, 19%, 18%);
+  --color-neutral-900: hsl(216, 12%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 93.75%;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background-color: var(--color-neutral-900);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 21.73rem;
+  background-color: var(--color-neutral-800);
+  padding: 1.7rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 27.47rem;
+    padding: 2.2rem 2.34rem;
+    border-radius: 2rem;
+  }
+}
+
+.rating-icon {
+  background-color: var(--color-neutral-700);
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .rating-icon {
+    box-sizing: content-box;
+    padding: 1rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+.card-header {
+  color: var(--color-neutral-100);
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .card-header {
+    font-size: 1.9rem;
+  }
+}
+
+.card-description {
+  color: var(--color-neutral-200);
+  font-size: 0.93rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .card-description {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+.rating-form > fieldset {
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .rating-form > fieldset {
+    margin-bottom: 1rem;
+  }
+}
+
+.rating-form-option {
+  background-color: var(--color-neutral-700);
+  color: var(--color-neutral-200);
+  width: 2.9rem;
+  height: 2.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: background-color 0.2s, color 0.3s;
+}
+
+@media (min-width: 768px) {
+  .rating-form-option {
+    font-size: 1.1rem;
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+}
+
+.rating-form-option:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-100);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-100);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  padding: 1rem 0;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-family: inherit;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.2s, color 0.3s;
+}
+
+@media (min-width: 768px) {
+  .submit {
+    font-size: 1rem;
+    padding: 0.9rem 0;
+    margin-bottom: 0;
+  }
+}
+
+.submit:hover {
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-500);
+}
+
+.rating-submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-submitted-img-container {
+  margin-bottom: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .rating-submitted-img-container {
+    padding-top: 0.8rem;
+    margin-bottom: 1.7rem;
+  }
+}
+
+.rating-submitted-selection {
+  background-color: var(--color-neutral-700);
+  padding: 0.5rem 0.75rem 0.4rem 0.75rem;
+  border-radius: 1.5rem;
+  color: var(--color-primary-500);
+  font-size: 0.93rem;
+  margin-bottom: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .rating-submitted-selection {
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+  }
+}
+
+.selected-label {
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-100);
+  font-weight: 700;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  border-width: 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--color-neutral-200);
+}
+
+.attribution > a,
+.attribution > a:visited {
+  text-decoration: none;
+  color: var(--color-primary-500);
+}
